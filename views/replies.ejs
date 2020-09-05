@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+
+  <h1><%= queryList.topic %></h1>
+  <h5><%= queryList.query %></h5>
+    <% if(queryList.answer.length ==0){ %>
+      <h3>NO REPLIES YET</h3>
+    <%}else{%>
+      <ul>
+    <%  queryList.answer.forEach(function(eachReply){ %>
+        <li><%= eachReply %></li>
+    <%  });%>
+    </ul>
+  <%}%>
+  
+<%- include('partials/footer') %>

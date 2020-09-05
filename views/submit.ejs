@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron centered">
+    <i class="fas fa-key fa-6x"></i>
+    <h1 class="display-3">Queries</h1>
+    <p class="secret-text">Don't keep any query, share them anonymously!</p>
+
+    <form action="/submit" method="POST">
+
+      <div class="form-group">
+        <input type="text" class="form-control text-center" name="topic" placeholder="What's the topic of your query?" autocomplete="off">
+        <textarea  type="text" row="4" class="form-control text-center" name="queryName" placeholder="Enter your query" autocomplete="off"></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+
+
+  </div>
+</div>
+<%- include('partials/footer') %>

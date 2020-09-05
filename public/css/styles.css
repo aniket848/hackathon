@@ -1,0 +1,31 @@
+
+body {
+  background-color: #E8ECEF;
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+.button{
+  background-color: #000;
+  color:#fff;
+  border-radius: 100px;
+  margin:20px;
+  margin-bottom: 30px;
+  position: absolute;
+  bottom: 0;
+  left:44%;
+  padding: 6px 12px;
+}
+.show{
+  background-color: #777;
+  visibility: visible;;
+}

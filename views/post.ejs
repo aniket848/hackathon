@@ -1,0 +1,18 @@
+<%- include('partials/header') %>
+
+ <h1><%= topic %></h1>
+ <p style="font-size:20px"><%= newQuery.query %></p>
+
+
+
+
+<form action="/post" method="POST">
+
+  <div class="form-group">
+  <input type="hidden" name="topic" value=<%= topic %>>
+  <textarea name="reply" rows="5" cols="80" placeholder="Enter Your Reply"></textarea>
+  </div>
+  <button type="submit" class="btn btn-dark">Submit</button>
+</form>
+
+<%- include('partials/footer') %>

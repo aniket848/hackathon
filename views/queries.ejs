@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+<h1 style="font-size:35px;text-align:center;">HERE YOU CAN RAISE A QUERY</h1>
+  <ol type="1">
+ <%queryList.forEach(function(singleQuery){%>
+
+   <li>
+       <h2><%= singleQuery.topic %></h2>
+       <p><%= singleQuery.query.substring(0,100) %>
+         <% if(singleQuery.query.length >100){%>
+         <a href="/<%=singleQuery.topic %>">... Read More</a>
+       <%}%>
+       </p>
+
+    <form action="/reply" method="post">
+      <button  class="btn btn-dark" >SEE REPLY</button>
+
+        <a href="/<%=singleQuery.topic %>"><button type="button" >ADD ANY REPLY</button></a>
+          <input name="list" value=<%=singleQuery.topic %> type="hidden">
+    </form>
+
+
+
+   </li>
+
+ <%})%>
+</ol>
+ <a href="/raise"><button class="button">RAISE A QUERY</button></a>
+
+
+
+
+<%- include('partials/footer') %>
