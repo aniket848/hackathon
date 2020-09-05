@@ -180,6 +180,18 @@ app.get("/queries",function(req,res){
   });
 });
 
+app.get("/contact",function(req,res){
+  res.render("contact");
+});
+
+app.get("/resources",function(req,res){
+  res.render("resources");
+});
+
+app.get("/about",function(req,res){
+  res.render("about");
+});
+
 app.post("/reply",function(req,res){
    const content = req.body.list;
 
